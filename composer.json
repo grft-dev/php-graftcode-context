@@ -1,0 +1,31 @@
+{
+  "name": "graftcode/graftcode-context",
+  "version": "0.0.4",
+  "description": "This package provides context for Graftcode invocations",
+  "type": "library",
+  "license": "MIT",
+  "require": {
+    "php": "^7.4 || ^8.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Graftcode\\Context\\": "src/Graftcode/Context/"
+    }
+  },
+  "authors": [
+    {
+      "name": "Graftcode S.A.",
+      "email": "support@graftcode.com",
+      "homepage": "https://www.graftcode.com"
+    }
+  ],
+  "keywords": [
+    "Graftcode"
+  ],
+  "support": {
+    "docs": "https://www.graftcode.com",
+    "email": "support@graftcode.com"
+  },
+  "prefer-stable": true,
+  "minimum-stability": "stable"
+}
