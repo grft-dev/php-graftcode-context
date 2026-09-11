@@ -1,6 +1,6 @@
 {
   "name": "graftcode/graftcode-context",
-  "version": "0.0.4",
+  "version": "1.0.1",
   "description": "This package provides context for Graftcode invocations",
   "type": "library",
   "license": "MIT",
@@ -27,5 +27,8 @@
     "email": "support@graftcode.com"
   },
   "prefer-stable": true,
-  "minimum-stability": "stable"
+  "minimum-stability": "stable",
+  "scripts": {
+    "test": "php tests/RequestContextTest.php"
+  }
 }

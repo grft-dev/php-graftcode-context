@@ -25,7 +25,7 @@ class RequestContext
      */
     public function getHeaders(): array
     {
-        return $this->headers;
+        return [...$this->headers];
     }
 
     /**
