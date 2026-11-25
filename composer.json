@@ -1,6 +1,6 @@
 {
   "name": "graftcode/graftcode-context",
-  "version": "1.0.3",
+  "version": "1.1.0",
   "description": "This package provides context for Graftcode invocations",
   "type": "library",
   "license": "MIT",

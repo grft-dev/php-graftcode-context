@@ -11,6 +11,10 @@ class RequestContext
     /** @var array<string, ?string> */
     private array $headers = [];
 
+    /**
+     * Context of the current invocation. PHP serves one request per process/worker at a time,
+     * so a static is enough. (PHP has no fiber-local storage; Fibers share this context.)
+     */
     public static function current(): RequestContext
     {
         if (self::$current === null) {
@@ -25,13 +29,16 @@ class RequestContext
      */
     public function getHeaders(): array
     {
-        return [...$this->headers];
+        // Arrays are values in PHP: returning one hands the caller a copy (copy-on-write).
+        return $this->headers;
     }
 
     /**
+     * Host only, called through reflection.
+     *
      * @param array<string, ?string> $headers
      */
-    public function setHeaders(array $headers): void
+    private function setHeaders(array $headers): void
     {
         $this->headers = $headers;
     }
